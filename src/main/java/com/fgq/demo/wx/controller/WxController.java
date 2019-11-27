@@ -26,7 +26,7 @@ import java.util.Map;
 public class WxController {
 
 
-    @Value("${TOKEN}")
+    @Value("${WX.TOKEN}")
     private String token;
 
 
