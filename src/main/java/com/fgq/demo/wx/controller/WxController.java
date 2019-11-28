@@ -2,9 +2,11 @@ package com.fgq.demo.wx.controller;
 
 import com.fgq.demo.wx.util.MessageHandlerUtil;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -33,6 +35,12 @@ public class WxController {
     @RequestMapping(value="/helloWx")
     public String hello(){
         return "hello wx";
+    }
+
+    @GetMapping("/")
+    public ModelAndView index(ModelAndView modelAndView) {
+        modelAndView.setViewName("1");
+        return modelAndView;
     }
 
     /**
